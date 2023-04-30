@@ -1,0 +1,231 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+    color-scheme: dark light;
+}
+
+/* min body height */
+
+body {
+    min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* My code from here */
+
+* {
+    /* Colors */
+    --Very-Dark-Grayish-Blue : hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue : hsl(214, 17%, 51%);
+    --Grayish-Blue : hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+    /* Typography */
+    --paragraph-font-size: 13px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Grayish-Blue);
+    font-family: Manrope,sans-serif;
+}
+
+.container {
+    display: flex;
+    width: clamp(44.64em,70%,46.5%);
+    height: 16em;
+}
+
+ .container__img img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     mix-blend-mode: multiply;
+     border-radius:8px 0 0 8px ;
+ }
+
+.container__img {
+    width: 120%;
+    height: 100%;
+}
+
+.container__content {
+    padding: 1.5em 3em 1.5em 2em;
+    background-color: white;
+    border-radius: 0 8px 8px 0;
+}
+
+.content__about {
+   font-size:1.1333em;
+   font-weight: 700;
+   color: var(--Very-Dark-Grayish-Blue);
+   line-height: 1.5;
+}
+
+.content__detail {
+    font-size: 0.8em;
+    padding-top: 0.8em;
+    line-height: 1.5;
+    color: var(--Desaturated-Dark-Blue);
+    font-weight:normal;
+}
+
+.content__author-detail{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5em;
+    position: relative;
+}
+
+.author-detail__info img{
+    border-radius: 50%;
+    width: 2.2em;
+    margin-right: 1em;
+}
+
+.author-detail__info{
+    display: flex;
+}
+
+.info__author-name{
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue)
+}
+
+.info__publish-date{
+    font-size: 0.745em;
+    color: var(--Grayish-Blue);
+    line-height: 1.599;
+}
+
+ .share__button {
+     padding: 7px;
+     border-radius: 50%;
+     border: none;
+     color: var(--Desaturated-Dark-Blue);
+ }
+
+  .share__button--clicked {
+      background-color: var(--Very-Dark-Grayish-Blue);
+  }
+
+ .path-new-color{
+       fill:white;
+  }
+
+.info__default--state {
+    display: none;
+}
+
+.info__clicked-tray{
+    display: flex;
+    position: absolute;
+    top:-3em;
+    left: 14em;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    justify-content: space-around;
+    align-items: center;
+    width: 13em;
+    padding: 0.8em;
+    border-radius: 8px;
+}
+
+.clicked-tray__share{
+    letter-spacing:4px;
+    font-size: 0.8em;
+    color: var(--Grayish-Blue);
+}
+
+.info__clicked-tray ::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--Very-Dark-Grayish-Blue);
+    top:3.57em;
+    left:7em;
+}
+
+/* When you hover on share button */
+.share__button :hover{
+    cursor: pointer;
+}
+
+/* For responsiveness [Mobile design] */
+@media (max-width: 700px) {
+
+    .container{
+        flex-direction: column;
+        width: clamp(18em,85%,20em);
+        height: auto;
+    }
+
+    .container__img{
+        width: 100%;
+        height: 14em;
+    }
+
+    .container__img img{
+        border-radius: 8px 8px 0 0;
+    }
+    .container__content{
+      border-radius:  0 0 8px 8px;
+    }
+
+     .info__clicked-tray{
+         position: absolute;
+         width:  clamp(10vw,20em,20em);
+         height: 3.9em;
+         transform: translate(-16em,4.33em);
+         padding-left: 2em;
+         justify-content: normal;
+         gap: 1em;
+         border-radius:  0 0  8px 8px;
+     }
+     .info__clicked-tray ::before{
+         content: none;
+     }
+
+     .share__button{
+         transform: translateY(0.1em);
+     }
+
+    .content__about{
+        font-size: 1em;
+    }
+
+    .mobile__share-bottom{
+        transform: translateY(0.9em);
+        background-color:var(--Desaturated-Dark-Blue);
+    }
+}
+
