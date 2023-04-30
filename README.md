@@ -1,6 +1,6 @@
 
 # Frontend Mentor - Article preview component solution
-[Live site URL here](https://link-url-here.org)
+[Live site URL here](https://babar1532.github.io/article-preview-compo/)
 
 This is a solution to the [Article preview component solution on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -31,8 +31,8 @@ Users should be able to:
  
 ### Links
 
-- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/nft-preview-card-component-using-flexbox-and-bem-method-qVh5_cdoPg)
-- Live Site URL: [Live site URL here](https://lere22.github.io/nft-preview-card-component/)
+- Solution URL: [Solution URL here](https://github.com/BABAR1532/article-preview-compo)
+- Live Site URL: [Live site URL here](https://babar1532.github.io/article-preview-compo/)
 
 
 ## My process
